@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "resolutions": {
+    "@babel/runtime": "^7.2.0",
+    "lodash": "4.17.11",
+    "babel-core": "^7.0.0-bridge.0",
+    "hoist-non-react-statics": "^3.2.1",
+    "regenerator-runtime": "^0.12.0",
+    "react": "^16.8.3",
+    "react-apollo": "~2.1.9",
+    "react-dom": "^16.8.3",
+    "react-is": "^16.8.3",
+    "warning": "^4.0.1",
+    "webpack": "^4.19.1",
+    "node-fetch": "^2.3.0",
+    "memoize-one": "4.1.0",
+    "ts-invariant": "^0.3.2",
+    "zen-observable-ts": "^0.8.16"
+  },
+  "engines": {
+    "node": "^8.11.1 || ^10.11.0",
+    "yarn": "1.10.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "wsrun": "^3.6.2"
+  },
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "@lego-shop/lego-ssr",
+  "version": "0.1.0",
+  "description": "LEGO Shop SSR",
+  "repository": "https://github.com/lego-shop/octan",
+  "license": "UNLICENSED",
+  "bin": {
+    "lego-ssr": "./bin/lego-ssr.js"
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-console": 0
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "**/*.js": [
+        "lego-scripts lint --fix",
+        "git add"
+      ]
+    }
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "@babel/runtime-corejs2": "^7.0.0",
+    "babel-plugin-universal-import": "^4.0.0",
+    "compression": "^1.7.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "http-proxy-middleware": "^0.19.1",
+    "mustache-express": "^1.2.8",
+    "newrelic": "^5.2.1",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-helmet-async": "^0.2.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-universal-component": "^3.0.2",
+    "styled-components": "^4.1.2",
+    "x-xss-protection": "^1.1.0"
+  }
+}

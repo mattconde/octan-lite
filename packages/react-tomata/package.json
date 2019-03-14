@@ -1,0 +1,42 @@
+{
+    "name": "@lego-shop/react-tomata",
+    "version": "1.0.0",
+    "license": "UNLICENSED",
+    "main": "./src/index.js",
+    "scripts": {
+      "precommit": "lint-staged",
+      "test": "lego-scripts test",
+      "flow": "lego-scripts flow check",
+      "lint": "lego-scripts lint src/"
+    },
+    "jest": {
+      "preset": "@lego-shop/lego-scripts"
+    },
+    "babel": {
+      "presets": [
+        "@lego-shop/lego-scripts/babel"
+      ]
+    },
+    "lint-staged": {
+      "linters": {
+        "src/**/*.js": [
+          "lego-scripts lint --fix",
+          "lego-scripts flow focus-check",
+          "lego-scripts test --bail --findRelatedTests",
+          "git add"
+        ]
+      }
+    },
+    "peerDependencies": {
+      "react": "^16.8.3",
+      "react-dom": "^16.8.3",
+      "react-test-renderer": "^16.8.3"
+    },
+    "devDependencies": {
+      "react": "^16.8.3",
+      "react-dom": "^16.8.3",
+      "react-test-renderer": "^16.8.3",
+      "react-testing-library": "^5.9.0"
+    }
+  }
+  

@@ -1,0 +1,70 @@
+{
+  "name": "@lego-shop/component-library",
+  "version": "0.1.0",
+  "description": "LEGO Shop component library",
+  "main": "index.js",
+  "repository": "https://github.com/lego-shop/octan",
+  "license": "UNLICENSED",
+  "scripts": {
+    "precommit": "lint-staged",
+    "start": "node server.js",
+    "dev": "styleguidist server",
+    "build": "NODE_ENV=production styleguidist build",
+    "test": "lego-scripts test",
+    "coverage": "lego-scripts coverage",
+    "lint": "lego-scripts lint index.js src/",
+    "flow": "lego-scripts flow",
+    "lint:styles": "lego-scripts lint-styles src/components/"
+  },
+  "babel": {
+    "presets": [
+      "@lego-shop/lego-scripts/babel"
+    ]
+  },
+  "jest": {
+    "preset": "@lego-shop/lego-scripts"
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "lego-scripts lint --fix",
+        "lego-scripts lint-styles",
+        "lego-scripts flow focus-check",
+        "lego-scripts test --bail --findRelatedTests",
+        "git add"
+      ]
+    }
+  },
+  "dependencies": {
+    "config": "^3.0.1",
+    "downshift": "^3.2.2",
+    "express": "^4.16.3",
+    "framesync": "^4.0.2",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.9.2",
+    "idx": "^2.4.0",
+    "lodash": "4.17.11",
+    "normalize.css": "8.0.1",
+    "polished": "^2.3.3",
+    "prop-types": "^15.6.2",
+    "qs": "^6.5.2",
+    "react": "^16.8.3",
+    "react-apollo": "~2.4.1",
+    "react-dom": "^16.8.3",
+    "react-fast-compare": "^2.0.4",
+    "react-focus-lock": "^1.11.2",
+    "react-html5video": "^2.5.1",
+    "react-no-ssr": "^1.1.0",
+    "react-router-dom": "^4.3.1",
+    "styled-components": "^4.1.2"
+  },
+  "devDependencies": {
+    "@lego-shop/lego-scripts": "*",
+    "enzyme": "^3.8.0",
+    "jest-styled-components": "^6.3.1",
+    "react-styleguidist": "^8.0.2",
+    "react-test-renderer": "^16.4.0",
+    "rsg-components": "^3.0.0",
+    "webpack": "^4.12.0"
+  }
+}
